@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head metafile="UTF-8">
+	<html>
+
+	<head>
+		<meta charset="utf-8">
+		<style type="text/css"></style>
+		<title>JavaScript Demo</title>
+	</head>
+
+<body>
+	<h2>JavaScript Demo</h2>
+	<button type="button" id="getBtn">Get Content</button>
+	<div id="contentContainer"></div>
+
+	<script type="text/javascript">
+		/*		var button = document.getElementById("getBtn");
+		
+				button.addEventListener("click", function () {
+		 citanje JSON objekta
+					var person = {
+						firstName: "Ben",
+						lastName: "Hur",
+						hairColor: "black",
+						eyeColor: "blue"
+					};
+		
+					var jsonPerson = JSON.stringify(person);
+					console.log("Person in JSON format: " + jsonPerson);
+		*/
+
+
+
+
+		window.onload = function () {
+			var button = document.getElementById("getBtn");
+
+			button.addEventListener("click", function () {
+				var model = {
+					"id": "OR:wt.part.WTPart:123456",
+					"typeId": "WCTYPE|wt.part.WTPart|com.mycompany.MySoftType",
+					"attributes": {},
+					"appData": {}
+				};
+				var forSending = JSON.stringify(model);
+				xhttp.open("POST", "https://20970ea8-09a9-45ab-b15c-46ffebdfa4d9.mock.pstmn.io", true, username = "wcadmin", password = "ptc");
+				var povratnitekst = xhttp.responseType="text";
+				xhttp.send();
+
+				document.getElementById("contentContainer").innerHTML = povratniTekst;
+
+				var xhttp = new XMLHttpRequest();
+
+				// xhttp.onreadystatechange = function () {
+				// 	if (xhttp.readyState == 4 && xhttp.status == 200) {
+				// 		var jsonPerson = JSON.parse(xhttp.responseText);
+				// 		document.getElementById("contentContainer").innerHTML = "first name: " + jsonPerson;
+				// 	}
+				// };
+				// xhttp.open("POST", "neki url", true, username = "wcadmin", password = "ptc");
+				// xhttp.send();
+			});
+		}
+
+	</script>
+
+</body>
+
+</html>

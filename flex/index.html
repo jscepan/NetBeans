@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		Scepan
+	</title>
+</head>
+<body>
+		<p>Cao. Da vidimo da li ce da radi. Srecno - trebace ti? :-p)</p>
+		<button type="button" id="getBtn">Receive data</button>
+		<div id="contentContainer"></div>
+
+			<script type="text/javascript">
+			// za prijem
+				window.onload = function () {
+					var button = document.getElementById("getBtn");
+					button.addEventListener("click", function(){
+						var xhttp = new XMLHttpRequest();
+						xhttp.onreadystatechange= function(){
+							if (xhttp.readyState == 4 && xhttp.status==200){
+								document.getElementById("contentContainer").innerHTML = xhttp.responseText;
+							}
+						}
+						xhttp.open("GET", "content.txt", true);
+						xhttp.send();
+					});
+				}
+			</script>
+
+			<script type="text/javascript">
+			//za slanje	
+				var xmlData = "<Person firstname = 'Scepan' lastname = 'Jankovic'/>";
+				var xReq = new XMLHttpRequest();
+				xReq.open("POST", "/ReceiveXMLData.aspx", false);
+				xReq.responseType = "text";
+				xReq.send(xmlData);
+			</script>
+</body>
+</html>
