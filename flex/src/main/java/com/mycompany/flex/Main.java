@@ -1,23 +1,11 @@
 package com.mycompany.flex;
 
 import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
-import java.io.BufferedOutputStream;
-import java.io.BufferedReader;
-import java.io.DataOutputStream;
-import java.io.FileInputStream;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.io.InputStreamReader;
 import java.io.Reader;
 import java.io.Writer;
-import java.net.HttpURLConnection;
-import java.net.ServerSocket;
-import java.net.Socket;
-import java.net.URL;
-import java.util.HashMap;
-import java.util.Map;
 
 public class Main {
 

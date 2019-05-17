@@ -15,46 +15,52 @@ import java.util.ArrayList;
 public class Main {
 
     public static void main(String[] args) throws MalformedURLException, IOException {
-        String user = "wcadmin";
-        String password = "ptc";
 
-        final String POST_PARAMS ="";
-//                "{\n" + "\"userId\": 101,\r\n"
-//                + "    \"id\": 101,\r\n"
-//                + "    \"title\": \"Test Title\",\r\n"
-//                + "    \"body\": \"Test Body\"" + "\n}";
-        System.out.println(POST_PARAMS);
+        String defaultUrlMaterials = "https://jsonplaceholder.typicode.com/albums";
 
-        String defaultUrlMaterials = "http://10.140.31.18/Windchill/servlet/rest/tm/types/com.lcs.wc.material.LCSMaterial/descendants";
-        URL urlSite = new URL(defaultUrlMaterials /*+ "VR:com.lcs.wc.material.LCSMaterial:230993/colors"*/);
-        HttpURLConnection con = (HttpURLConnection) urlSite.openConnection();
-        Authenticator.setDefault(new Authenticator() {
-            protected PasswordAuthentication getPasswordAuthentication() {
-                return new PasswordAuthentication(
-                        user, password.toCharArray());
-            }
-        });
-        con.setRequestMethod("POST");
-        con.setRequestProperty("Content-Type", "application/json; utf-8");
-        con.setRequestProperty("Accept", "application/json");
-        con.setDoOutput(true);
-        con.setAuthenticator(Authenticator.getDefault());
-//        OutputStream os = con.getOutputStream();
-//        os.write(POST_PARAMS.getBytes());
-//        os.flush();
-//        os.close();
-        //       HttpClient httpclient = new DefaultHttpClient();
+        URL urlSite = new URL(defaultUrlMaterials/*+ "VR:com.lcs.wc.material.LCSMaterial:230993/colors"*/); //Create A URL Object
+        HttpURLConnection con = (HttpURLConnection) urlSite.openConnection(); //From the above URL object, we can invoke the openConnection method to get the HttpURLConnection object. We can’t instantiate HttpURLConnection directly, as it’s an abstract class
+        con.setRequestMethod("POST"); //Set the Request Method
+        con.setRequestProperty("Content-Type", "application/json; utf-8"); //This parameter has to be set to send the request body in JSON format.
+        con.setRequestProperty("Accept", "application/json"); //Set the “Accept” request header to “application/json” to read the response in the desired format:
+        con.setDoOutput(true); //Ensure the Connection Will Be Used to Send Content. Otherwise, we’ll not be able to write content to the connection output stream
+        con.setDoInput(true);
+        VezbaFakeId v = new VezbaFakeId(111, 111, "Scepan");
+        Gson gson = new Gson();
+        String jsonInputString = gson.toJson(v); //After creating a custom JSON String:
+        System.out.println("ovo se salje: " + jsonInputString);
+        OutputStream os = con.getOutputStream(); //We’d need to write it
+        byte[] input = jsonInputString.getBytes();
+        os.write(input, 0, input.length);
+
         int responseCode = con.getResponseCode();
         System.out.println("Odgovor je:" + responseCode);
         if (responseCode == HttpURLConnection.HTTP_CREATED) {
-            BufferedReader in = new BufferedReader(new InputStreamReader(con.getInputStream()));
 
-            String inputLine;
-            StringBuilder content = new StringBuilder();
-            while ((inputLine = in.readLine()) != null) {
-                content.append(inputLine);
+            BufferedReader br = new BufferedReader(new InputStreamReader(con.getInputStream(), "utf-8"));//Read the Response from Input Stream
+            String responseLine = null;
+            StringBuilder response = new StringBuilder();
+            while ((responseLine = br.readLine()) != null) {
+                response.append(responseLine.trim());
+                System.out.println(response);
             }
+            System.out.println(responseLine);
 
+//        Authenticator.setDefault(new Authenticator() {
+//            protected PasswordAuthentication getPasswordAuthentication() {
+//                return new PasswordAuthentication(
+//                        user, password.toCharArray());
+//            }
+//        });
+//
+
+//            VezbaFakeId[] vezbaFakeId = new Gson().fromJson(content.toString(), VezbaFakeId[].class);
+//            for (VezbaFakeId v: vezbaFakeId)
+//            {
+//                System.out.println(v);
+//            }
+
+                /*
             Items[] items = new Gson().fromJson(content.toString().substring(content.toString().indexOf(':') + 1, content.toString().length()).replaceAll(".$", ""), Items[].class);
 
             Items headItem = null;
@@ -106,5 +112,7 @@ public class Main {
             System.out.println(incrementBlanks + "+" + items.getDisplayName());
             printList(items.childItemsList, increment += increment);
         }
+    }*/
+            }
+        }
     }
-}

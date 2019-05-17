@@ -71,8 +71,4 @@ public class Items {
         this.read = read;
     }
 
-    @Override
-    public String toString() {
-        return "[id=" + id + ", parentId=" + parentId + ", name=" + name + ", displayName=" + displayName + ", create=" + create + ", modify=" + modify + ", read=" + read + ']';
-    }
 }
