@@ -44,7 +44,6 @@ public class Main {
                 response.append(responseLine.trim());
                 System.out.println(response);
             }
-            System.out.println(responseLine);
 
 //        Authenticator.setDefault(new Authenticator() {
 //            protected PasswordAuthentication getPasswordAuthentication() {
