@@ -1,0 +1,900 @@
+{
+	"info": {
+		"_postman_id": "b772cf62-f169-4fe2-b8c9-5648b33b577d",
+		"name": "FlexPLM",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "CSRF Protection",
+			"item": [
+				{
+					"name": "/security/csrf",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "ptc",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "p76sasa",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://10.140.31.18/Windchill/servlet/rest/security/csrf",
+							"protocol": "http",
+							"host": [
+								"10",
+								"140",
+								"31",
+								"18"
+							],
+							"path": [
+								"Windchill",
+								"servlet",
+								"rest",
+								"security",
+								"csrf"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Plugin76 Type System",
+			"item": [
+				{
+					"name": "/p76/types/{typeName}/descendants",
+					"item": [
+						{
+							"name": "LCSColor",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "password",
+											"value": "ptc",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "p76sasa",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://10.140.31.18/Windchill/servlet/rest/p76/types/WCTYPE|com.lcs.wc.color.LCSColor/descendants",
+									"protocol": "http",
+									"host": [
+										"10",
+										"140",
+										"31",
+										"18"
+									],
+									"path": [
+										"Windchill",
+										"servlet",
+										"rest",
+										"p76",
+										"types",
+										"WCTYPE|com.lcs.wc.color.LCSColor",
+										"descendants"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "LCSDocument",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "password",
+											"value": "ptc",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "p76sasa",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://10.140.31.18/Windchill/servlet/rest/p76/types/WCTYPE|com.lcs.wc.document.LCSDocument/descendants",
+									"protocol": "http",
+									"host": [
+										"10",
+										"140",
+										"31",
+										"18"
+									],
+									"path": [
+										"Windchill",
+										"servlet",
+										"rest",
+										"p76",
+										"types",
+										"WCTYPE|com.lcs.wc.document.LCSDocument",
+										"descendants"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "LCSPalette",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "password",
+											"value": "ptc",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "p76sasa",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://10.140.31.18/Windchill/servlet/rest/p76/types/WCTYPE|com.lcs.wc.color.LCSPalette/descendants",
+									"protocol": "http",
+									"host": [
+										"10",
+										"140",
+										"31",
+										"18"
+									],
+									"path": [
+										"Windchill",
+										"servlet",
+										"rest",
+										"p76",
+										"types",
+										"WCTYPE|com.lcs.wc.color.LCSPalette",
+										"descendants"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "LCSMaterial",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "password",
+											"value": "ptc",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "p76sasa",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://10.140.31.18/Windchill/servlet/rest/p76/types/WCTYPE|com.lcs.wc.material.LCSMaterial/descendants",
+									"protocol": "http",
+									"host": [
+										"10",
+										"140",
+										"31",
+										"18"
+									],
+									"path": [
+										"Windchill",
+										"servlet",
+										"rest",
+										"p76",
+										"types",
+										"WCTYPE|com.lcs.wc.material.LCSMaterial",
+										"descendants"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "FlexBOMLink",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "password",
+											"value": "ptc",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "p76sasa",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://10.140.31.18/Windchill/servlet/rest/p76/types/WCTYPE|com.lcs.wc.flexbom.FlexBOMLink/descendants",
+									"protocol": "http",
+									"host": [
+										"10",
+										"140",
+										"31",
+										"18"
+									],
+									"path": [
+										"Windchill",
+										"servlet",
+										"rest",
+										"p76",
+										"types",
+										"WCTYPE|com.lcs.wc.flexbom.FlexBOMLink",
+										"descendants"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "FlexBOMPart",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "password",
+											"value": "ptc",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "p76sasa",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://10.140.31.18/Windchill/servlet/rest/p76/types/WCTYPE|com.lcs.wc.flexbom.FlexBOMPart/descendants",
+									"protocol": "http",
+									"host": [
+										"10",
+										"140",
+										"31",
+										"18"
+									],
+									"path": [
+										"Windchill",
+										"servlet",
+										"rest",
+										"p76",
+										"types",
+										"WCTYPE|com.lcs.wc.flexbom.FlexBOMPart",
+										"descendants"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "LCSProductSeasonLink",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "password",
+											"value": "ptc",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "p76sasa",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://10.140.31.18/Windchill/servlet/rest/p76/types/WCTYPE|com.lcs.wc.season.LCSProductSeasonLink/descendants",
+									"protocol": "http",
+									"host": [
+										"10",
+										"140",
+										"31",
+										"18"
+									],
+									"path": [
+										"Windchill",
+										"servlet",
+										"rest",
+										"p76",
+										"types",
+										"WCTYPE|com.lcs.wc.season.LCSProductSeasonLink",
+										"descendants"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Placeholder",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "password",
+											"value": "ptc",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "p76sasa",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://10.140.31.18/Windchill/servlet/rest/p76/types/WCTYPE|com.lcs.wc.placeholder.Placeholder/descendants",
+									"protocol": "http",
+									"host": [
+										"10",
+										"140",
+										"31",
+										"18"
+									],
+									"path": [
+										"Windchill",
+										"servlet",
+										"rest",
+										"p76",
+										"types",
+										"WCTYPE|com.lcs.wc.placeholder.Placeholder",
+										"descendants"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "LCSProduct",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "password",
+											"value": "ptc",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "p76sasa",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://10.140.31.18/Windchill/servlet/rest/p76/types/WCTYPE|com.lcs.wc.product.LCSProduct/descendants",
+									"protocol": "http",
+									"host": [
+										"10",
+										"140",
+										"31",
+										"18"
+									],
+									"path": [
+										"Windchill",
+										"servlet",
+										"rest",
+										"p76",
+										"types",
+										"WCTYPE|com.lcs.wc.product.LCSProduct",
+										"descendants"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "FlexSpecification",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "password",
+											"value": "ptc",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "p76sasa",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://10.140.31.18/Windchill/servlet/rest/p76/types/WCTYPE|com.lcs.wc.specification.FlexSpecification/descendants",
+									"protocol": "http",
+									"host": [
+										"10",
+										"140",
+										"31",
+										"18"
+									],
+									"path": [
+										"Windchill",
+										"servlet",
+										"rest",
+										"p76",
+										"types",
+										"WCTYPE|com.lcs.wc.specification.FlexSpecification",
+										"descendants"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "LCSSKU",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "password",
+											"value": "ptc",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "p76sasa",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://10.140.31.18/Windchill/servlet/rest/p76/types/WCTYPE|com.lcs.wc.product.LCSSKU/descendants",
+									"protocol": "http",
+									"host": [
+										"10",
+										"140",
+										"31",
+										"18"
+									],
+									"path": [
+										"Windchill",
+										"servlet",
+										"rest",
+										"p76",
+										"types",
+										"WCTYPE|com.lcs.wc.product.LCSSKU",
+										"descendants"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "LCSSupplier",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "password",
+											"value": "ptc",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "p76sasa",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://10.140.31.18/Windchill/servlet/rest/p76/types/WCTYPE|com.lcs.wc.supplier.LCSSupplier/descendants",
+									"protocol": "http",
+									"host": [
+										"10",
+										"140",
+										"31",
+										"18"
+									],
+									"path": [
+										"Windchill",
+										"servlet",
+										"rest",
+										"p76",
+										"types",
+										"WCTYPE|com.lcs.wc.supplier.LCSSupplier",
+										"descendants"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "LCSSeason",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "password",
+											"value": "ptc",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "p76sasa",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://10.140.31.18/Windchill/servlet/rest/p76/types/WCTYPE|com.lcs.wc.season.LCSSeason/descendants",
+									"protocol": "http",
+									"host": [
+										"10",
+										"140",
+										"31",
+										"18"
+									],
+									"path": [
+										"Windchill",
+										"servlet",
+										"rest",
+										"p76",
+										"types",
+										"WCTYPE|com.lcs.wc.season.LCSSeason",
+										"descendants"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "LCSSourcingConfig",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "password",
+											"value": "ptc",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "p76sasa",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://10.140.31.18/Windchill/servlet/rest/p76/types/WCTYPE|com.lcs.wc.sourcing.LCSSourcingConfig/descendants",
+									"protocol": "http",
+									"host": [
+										"10",
+										"140",
+										"31",
+										"18"
+									],
+									"path": [
+										"Windchill",
+										"servlet",
+										"rest",
+										"p76",
+										"types",
+										"WCTYPE|com.lcs.wc.sourcing.LCSSourcingConfig",
+										"descendants"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "/p76/types/properties",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "ptc",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "p76sasa",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "CSRF_NONCE",
+								"value": "4iwdW8bH+0TYvGN+1kZTPZOhvm+L/SxHkEcoMP+fmDG21VMXsF1QGrOqnQuq1wE6oRpTPbe2mHnijVZL1RQkYvHzyHXhilkR03t4Y5yQrRXo0g8up0ovDqymunaZgV4=",
+								"type": "text"
+							},
+							{
+								"key": "X-Auth-Token",
+								"value": "8F090804908A729F429FA648DD8B19BE5AEBF605B1727768843961D83C38E8FF",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"ids\": [\n        \"com.lcs.wc.flexbom.FlexBOMLink.designBomCommentsKey\",\n        \"com.lcs.wc.color.isCMYKEnabled\",\n        \"com.lcs.wc.color.cmyk.InternalKeyForC\",\n        \"com.lcs.wc.color.cmyk.InternalKeyForM\",\n        \"com.lcs.wc.color.cmyk.InternalKeyForY\",\n        \"com.lcs.wc.color.cmyk.InternalKeyForK\",\n        \"com.lcs.wc.color.cmyk.InternalKeyForIsCMYK\"\n    ]\n}"
+						},
+						"url": {
+							"raw": "http://10.140.31.18/Windchill/servlet/rest/p76/types/properties",
+							"protocol": "http",
+							"host": [
+								"10",
+								"140",
+								"31",
+								"18"
+							],
+							"path": [
+								"Windchill",
+								"servlet",
+								"rest",
+								"p76",
+								"types",
+								"properties"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/p76/types/absr",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "ptc",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "p76sasa",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "CSRF_NONCE",
+								"type": "text",
+								"value": "4iwdW8bH+0TYvGN+1kZTPZOhvm+L/SxHkEcoMP+fmDG21VMXsF1QGrOqnQuq1wE6oRpTPbe2mHnijVZL1RQkYvHzyHXhilkR03t4Y5yQrRXo0g8up0ovDqymunaZgV4="
+							},
+							{
+								"key": "X-Auth-Token",
+								"type": "text",
+								"value": "8F090804908A729F429FA648DD8B19BE5AEBF605B1727768843961D83C38E8FF"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"ids\": [\n        \"WCTYPE|com.lcs.wc.flexbom.FlexBOMPart\",\n        \"WCTYPE|com.lcs.wc.flexbom.FlexBOMLink\",\n        \"WCTYPE|com.lcs.wc.color.LCSColor\",\n        \"WCTYPE|com.lcs.wc.document.LCSDocument\",\n        \"WCTYPE|com.lcs.wc.material.LCSMaterial\",\n        \"WCTYPE|com.lcs.wc.color.LCSPalette\",\n        \"WCTYPE|com.lcs.wc.placeholder.Placeholder\",\n        \"WCTYPE|com.lcs.wc.product.LCSProduct\",\n        \"WCTYPE|com.lcs.wc.season.LCSProductSeasonLink\",\n        \"WCTYPE|com.lcs.wc.season.LCSSeason\",\n        \"WCTYPE|com.lcs.wc.product.LCSSKU\",\n        \"WCTYPE|com.lcs.wc.sourcing.LCSSourcingConfig\",\n        \"WCTYPE|com.lcs.wc.specification.FlexSpecification\",\n        \"WCTYPE|com.lcs.wc.supplier.LCSSupplier\"\n    ]\n}"
+						},
+						"url": {
+							"raw": "http://10.140.31.18/Windchill/servlet/rest/p76/types/absr",
+							"protocol": "http",
+							"host": [
+								"10",
+								"140",
+								"31",
+								"18"
+							],
+							"path": [
+								"Windchill",
+								"servlet",
+								"rest",
+								"p76",
+								"types",
+								"absr"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/p76/types/agvr",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "ptc",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "p76sasa",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "CSRF_NONCE",
+								"type": "text",
+								"value": "4iwdW8bH+0TYvGN+1kZTPZOhvm+L/SxHkEcoMP+fmDG21VMXsF1QGrOqnQuq1wE6oRpTPbe2mHnijVZL1RQkYvHzyHXhilkR03t4Y5yQrRXo0g8up0ovDqymunaZgV4="
+							},
+							{
+								"key": "X-Auth-Token",
+								"type": "text",
+								"value": "8F090804908A729F429FA648DD8B19BE5AEBF605B1727768843961D83C38E8FF"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"ids\": [\n        \"WCTYPE|com.lcs.wc.flexbom.FlexBOMPart\",\n        \"WCTYPE|com.lcs.wc.flexbom.FlexBOMPart|com.plugin76.Labor_BOM$com_lcs_wc_flexbom_FlexBOMPart\",\n        \"WCTYPE|com.lcs.wc.flexbom.FlexBOMPart|com.plugin76.Materials_BOM$com_lcs_wc_flexbom_FlexBOMPart\",\n        \"WCTYPE|com.lcs.wc.flexbom.FlexBOMPart|com.plugin76.Materials_BOM$com_lcs_wc_flexbom_FlexBOMPart|com.plugin76_Materials_BOM$com_lcs_wc_flexbom_FlexBOMPart\",\n        \"WCTYPE|com.lcs.wc.flexbom.FlexBOMPart|com.plugin76.Materials_BOM$com_lcs_wc_flexbom_FlexBOMPart|com.plugin76_Materials_BOM$com_lcs_wc_flexbom_FlexBOMPart|com.plugin76.Apparel_Product_Materials_BOM$com_lcs_wc_flexbom_FlexBOMPart\",\n        \"WCTYPE|com.lcs.wc.flexbom.FlexBOMPart|com.plugin76.Materials_BOM$com_lcs_wc_flexbom_FlexBOMPart|com.plugin76_Materials_BOM$com_lcs_wc_flexbom_FlexBOMPart|com.plugin76.Apparel_Product_Materials_BOM$com_lcs_wc_flexbom_FlexBOMPart|com.plugin76.enabledButRestricted$com_lcs_wc_flexbom_FlexBOMPart\",\n        \"WCTYPE|com.lcs.wc.flexbom.FlexBOMPart|com.plugin76.Materials_BOM$com_lcs_wc_flexbom_FlexBOMPart|com.plugin76_Materials_BOM$com_lcs_wc_flexbom_FlexBOMPart|com.plugin76.Apparel_Product_Materials_BOM$com_lcs_wc_flexbom_FlexBOMPart|com.plugin76.notEnabledBOMType$com_lcs_wc_flexbom_FlexBOMPart\",\n        \"WCTYPE|com.lcs.wc.flexbom.FlexBOMPart|com.plugin76.Materials_BOM$com_lcs_wc_flexbom_FlexBOMPart|com.plugin76_Materials_BOM$com_lcs_wc_flexbom_FlexBOMPart|com.plugin76.Footwear_Product_Materials_BOM$com_lcs_wc_flexbom_FlexBOMPart\",\n        \"WCTYPE|com.lcs.wc.flexbom.FlexBOMLink\",\n        \"WCTYPE|com.lcs.wc.flexbom.FlexBOMLink|com.plugin76.Labor_BOM$com_lcs_wc_flexbom_FlexBOMLink\",\n        \"WCTYPE|com.lcs.wc.flexbom.FlexBOMLink|com.plugin76.Materials_BOM$com_lcs_wc_flexbom_FlexBOMLink\",\n        \"WCTYPE|com.lcs.wc.flexbom.FlexBOMLink|com.plugin76.Materials_BOM$com_lcs_wc_flexbom_FlexBOMLink|com.plugin76_Materials_BOM$com_lcs_wc_flexbom_FlexBOMLink\",\n        \"WCTYPE|com.lcs.wc.flexbom.FlexBOMLink|com.plugin76.Materials_BOM$com_lcs_wc_flexbom_FlexBOMLink|com.plugin76_Materials_BOM$com_lcs_wc_flexbom_FlexBOMLink|com.plugin76.Apparel_Product_Materials_BOM$com_lcs_wc_flexbom_FlexBOMLink\",\n        \"WCTYPE|com.lcs.wc.flexbom.FlexBOMLink|com.plugin76.Materials_BOM$com_lcs_wc_flexbom_FlexBOMLink|com.plugin76_Materials_BOM$com_lcs_wc_flexbom_FlexBOMLink|com.plugin76.Apparel_Product_Materials_BOM$com_lcs_wc_flexbom_FlexBOMLink|com.plugin76.enabledButRestricted$com_lcs_wc_flexbom_FlexBOMLink\",\n        \"WCTYPE|com.lcs.wc.flexbom.FlexBOMLink|com.plugin76.Materials_BOM$com_lcs_wc_flexbom_FlexBOMLink|com.plugin76_Materials_BOM$com_lcs_wc_flexbom_FlexBOMLink|com.plugin76.Apparel_Product_Materials_BOM$com_lcs_wc_flexbom_FlexBOMLink|com.plugin76.notEnabledBOMType$com_lcs_wc_flexbom_FlexBOMLink\",\n        \"WCTYPE|com.lcs.wc.flexbom.FlexBOMLink|com.plugin76.Materials_BOM$com_lcs_wc_flexbom_FlexBOMLink|com.plugin76_Materials_BOM$com_lcs_wc_flexbom_FlexBOMLink|com.plugin76.Footwear_Product_Materials_BOM$com_lcs_wc_flexbom_FlexBOMLink\",\n        \"WCTYPE|com.lcs.wc.color.LCSColor\",\n        \"WCTYPE|com.lcs.wc.color.LCSColor|com.plugin76.Artwork_Color\",\n        \"WCTYPE|com.lcs.wc.color.LCSColor|com.plugin76.Custom_Color\",\n        \"WCTYPE|com.lcs.wc.color.LCSColor|com.plugin76.p76testing\",\n        \"WCTYPE|com.lcs.wc.color.LCSColor|com.plugin76.PrintandPattern_Color\",\n        \"WCTYPE|com.lcs.wc.color.LCSColor|com.plugin76.Color_Solid\",\n        \"WCTYPE|com.lcs.wc.color.LCSColor|com.plugin76.Washes_Color\",\n        \"WCTYPE|com.lcs.wc.document.LCSDocument\",\n        \"WCTYPE|com.lcs.wc.document.LCSDocument|com.plugin76.3DModel_Document\",\n        \"WCTYPE|com.lcs.wc.document.LCSDocument|com.plugin76.Artwork_Document\",\n        \"WCTYPE|com.lcs.wc.document.LCSDocument|com.plugin76.ConceptDocuments_Document\",\n        \"WCTYPE|com.lcs.wc.document.LCSDocument|com.plugin76.FirstInsightImports_Documents\",\n        \"WCTYPE|com.lcs.wc.document.LCSDocument|com.plugin76.GeneratedTechPack_Document\",\n        \"WCTYPE|com.lcs.wc.document.LCSDocument|com.plugin76.ImagesPage_Document\",\n        \"WCTYPE|com.lcs.wc.document.LCSDocument|com.plugin76.ImagesPage_Document|com.plugin76.SubImagesPage_Document\",\n        \"WCTYPE|com.lcs.wc.document.LCSDocument|com.plugin76.ImagesPage_Document|com.plugin76.ImagesPageTurntable_Document\",\n        \"WCTYPE|com.lcs.wc.document.LCSDocument|com.plugin76.Manuals_Documents\",\n        \"WCTYPE|com.lcs.wc.document.LCSDocument|com.plugin76.Others_Documents\",\n        \"WCTYPE|com.lcs.wc.document.LCSDocument|com.plugin76.Photos_Documents\",\n        \"WCTYPE|com.lcs.wc.document.LCSDocument|com.plugin76.TestingDocuments_Document\",\n        \"WCTYPE|com.lcs.wc.material.LCSMaterial\",\n        \"WCTYPE|com.lcs.wc.material.LCSMaterial|com.plugin76.Apparel_Material$com_lcs_wc_material_LCSMaterial\",\n        \"WCTYPE|com.lcs.wc.material.LCSMaterial|com.plugin76.Embellishments_Material$com_lcs_wc_material_LCSMaterial\",\n        \"WCTYPE|com.lcs.wc.material.LCSMaterial|com.plugin76.Fabric_Material$com_lcs_wc_material_LCSMaterial\",\n        \"WCTYPE|com.lcs.wc.material.LCSMaterial|com.plugin76.Footwear_Material$com_lcs_wc_material_LCSMaterial\",\n        \"WCTYPE|com.lcs.wc.material.LCSMaterial|com.plugin76.Labor_Material$com_lcs_wc_material_LCSMaterial\",\n        \"WCTYPE|com.lcs.wc.material.LCSMaterial|com.plugin76.Leather_Material$com_lcs_wc_material_LCSMaterial\",\n        \"WCTYPE|com.lcs.wc.material.LCSMaterial|com.plugin76.p76testing$com_lcs_wc_material_LCSMaterial\",\n        \"WCTYPE|com.lcs.wc.material.LCSMaterial|com.plugin76.ProductPacking_Material$com_lcs_wc_material_LCSMaterial\",\n        \"WCTYPE|com.lcs.wc.material.LCSMaterial|com.plugin76.ShippingPacking_Material$com_lcs_wc_material_LCSMaterial\",\n        \"WCTYPE|com.lcs.wc.color.LCSPalette\",\n        \"WCTYPE|com.lcs.wc.color.LCSPalette|com.plugin76.Apparel_Palette$com_lcs_wc_color_LCSPalette\",\n        \"WCTYPE|com.lcs.wc.color.LCSPalette|com.plugin76.Footwear_Palette$com_lcs_wc_color_LCSPalette\",\n        \"WCTYPE|com.lcs.wc.placeholder.Placeholder\",\n        \"WCTYPE|com.lcs.wc.placeholder.Placeholder|com.plugin76.Apparel_Product$com_lcs_wc_placeholder_Placeholder\",\n        \"WCTYPE|com.lcs.wc.placeholder.Placeholder|com.plugin76.Apparel_Product$com_lcs_wc_placeholder_Placeholder|com.plugin76.Childrens_Apparel_Product$com_lcs_wc_placeholder_Placeholder\",\n        \"WCTYPE|com.lcs.wc.placeholder.Placeholder|com.plugin76.Apparel_Product$com_lcs_wc_placeholder_Placeholder|com.plugin76.Mens_Apparel_Product$com_lcs_wc_placeholder_Placeholder\",\n        \"WCTYPE|com.lcs.wc.placeholder.Placeholder|com.plugin76.Apparel_Product$com_lcs_wc_placeholder_Placeholder|com.plugin76.Womens_Apparel_product$com_lcs_wc_placeholder_Placeholder\",\n        \"WCTYPE|com.lcs.wc.placeholder.Placeholder|com.plugin76.Footwear_Product$com_lcs_wc_placeholder_Placeholder\",\n        \"WCTYPE|com.lcs.wc.placeholder.Placeholder|com.plugin76.Footwear_Product$com_lcs_wc_placeholder_Placeholder|com.plugin76.Childrens_Footwear_Product$com_lcs_wc_placeholder_Placeholder\",\n        \"WCTYPE|com.lcs.wc.placeholder.Placeholder|com.plugin76.Footwear_Product$com_lcs_wc_placeholder_Placeholder|com.plugin76.Mens_Footwear_Product$com_lcs_wc_placeholder_Placeholder\",\n        \"WCTYPE|com.lcs.wc.placeholder.Placeholder|com.plugin76.Footwear_Product$com_lcs_wc_placeholder_Placeholder|com.plugin76.Womens_Footwear_product$com_lcs_wc_placeholder_Placeholder\",\n        \"WCTYPE|com.lcs.wc.placeholder.Placeholder|com.plugin76.homeGoods$com_lcs_wc_placeholder_Placeholder\",\n        \"WCTYPE|com.lcs.wc.placeholder.Placeholder|com.plugin76.p76$com_lcs_wc_placeholder_Placeholder\",\n        \"WCTYPE|com.lcs.wc.placeholder.Placeholder|com.plugin76.p76$com_lcs_wc_placeholder_Placeholder|com.plugin76.p76DefaultValues$com_lcs_wc_placeholder_Placeholder\",\n        \"WCTYPE|com.lcs.wc.placeholder.Placeholder|com.plugin76.p76$com_lcs_wc_placeholder_Placeholder|com.plugin76.p76NotSettable$com_lcs_wc_placeholder_Placeholder\",\n        \"WCTYPE|com.lcs.wc.placeholder.Placeholder|com.plugin76.p76$com_lcs_wc_placeholder_Placeholder|com.plugin76.p76NotUpdatable$com_lcs_wc_placeholder_Placeholder\",\n        \"WCTYPE|com.lcs.wc.placeholder.Placeholder|com.plugin76.p76$com_lcs_wc_placeholder_Placeholder|com.plugin76.p76Required$com_lcs_wc_placeholder_Placeholder\",\n        \"WCTYPE|com.lcs.wc.placeholder.Placeholder|com.plugin76.p76$com_lcs_wc_placeholder_Placeholder|com.plugin76.p76_vlad_testing$com_lcs_wc_placeholder_Placeholder\",\n        \"WCTYPE|com.lcs.wc.placeholder.Placeholder|com.plugin76.p76$com_lcs_wc_placeholder_Placeholder|com.plugin76.P76_Pero$com_lcs_wc_placeholder_Placeholder\",\n        \"WCTYPE|com.lcs.wc.placeholder.Placeholder|com.plugin76.p76$com_lcs_wc_placeholder_Placeholder|com.plugin76.T1AG$com_lcs_wc_placeholder_Placeholder\",\n        \"WCTYPE|com.lcs.wc.placeholder.Placeholder|com.plugin76.p76$com_lcs_wc_placeholder_Placeholder|com.plugin76.t09Testing$com_lcs_wc_placeholder_Placeholder\",\n        \"WCTYPE|com.lcs.wc.placeholder.Placeholder|com.plugin76.p76$com_lcs_wc_placeholder_Placeholder|com.plugin76.vtMixed$com_lcs_wc_placeholder_Placeholder\",\n        \"WCTYPE|com.lcs.wc.product.LCSProduct\",\n        \"WCTYPE|com.lcs.wc.product.LCSProduct|com.plugin76.Apparel_Product$com_lcs_wc_product_LCSProduct\",\n        \"WCTYPE|com.lcs.wc.product.LCSProduct|com.plugin76.Apparel_Product$com_lcs_wc_product_LCSProduct|com.plugin76.Childrens_Apparel_Product$com_lcs_wc_product_LCSProduct\",\n        \"WCTYPE|com.lcs.wc.product.LCSProduct|com.plugin76.Apparel_Product$com_lcs_wc_product_LCSProduct|com.plugin76.Mens_Apparel_Product$com_lcs_wc_product_LCSProduct\",\n        \"WCTYPE|com.lcs.wc.product.LCSProduct|com.plugin76.Apparel_Product$com_lcs_wc_product_LCSProduct|com.plugin76.Womens_Apparel_product$com_lcs_wc_product_LCSProduct\",\n        \"WCTYPE|com.lcs.wc.product.LCSProduct|com.plugin76.Footwear_Product$com_lcs_wc_product_LCSProduct\",\n        \"WCTYPE|com.lcs.wc.product.LCSProduct|com.plugin76.Footwear_Product$com_lcs_wc_product_LCSProduct|com.plugin76.Childrens_Footwear_Product$com_lcs_wc_product_LCSProduct\",\n        \"WCTYPE|com.lcs.wc.product.LCSProduct|com.plugin76.Footwear_Product$com_lcs_wc_product_LCSProduct|com.plugin76.Mens_Footwear_Product$com_lcs_wc_product_LCSProduct\",\n        \"WCTYPE|com.lcs.wc.product.LCSProduct|com.plugin76.Footwear_Product$com_lcs_wc_product_LCSProduct|com.plugin76.Womens_Footwear_product$com_lcs_wc_product_LCSProduct\",\n        \"WCTYPE|com.lcs.wc.product.LCSProduct|com.plugin76.homeGoods$com_lcs_wc_product_LCSProduct\",\n        \"WCTYPE|com.lcs.wc.product.LCSProduct|com.plugin76.p76$com_lcs_wc_product_LCSProduct\",\n        \"WCTYPE|com.lcs.wc.product.LCSProduct|com.plugin76.p76$com_lcs_wc_product_LCSProduct|com.plugin76.p76DefaultValues$com_lcs_wc_product_LCSProduct\",\n        \"WCTYPE|com.lcs.wc.product.LCSProduct|com.plugin76.p76$com_lcs_wc_product_LCSProduct|com.plugin76.p76NotSettable$com_lcs_wc_product_LCSProduct\",\n        \"WCTYPE|com.lcs.wc.product.LCSProduct|com.plugin76.p76$com_lcs_wc_product_LCSProduct|com.plugin76.p76NotUpdatable$com_lcs_wc_product_LCSProduct\",\n        \"WCTYPE|com.lcs.wc.product.LCSProduct|com.plugin76.p76$com_lcs_wc_product_LCSProduct|com.plugin76.p76Required$com_lcs_wc_product_LCSProduct\",\n        \"WCTYPE|com.lcs.wc.product.LCSProduct|com.plugin76.p76$com_lcs_wc_product_LCSProduct|com.plugin76.p76_vlad_testing$com_lcs_wc_product_LCSProduct\",\n        \"WCTYPE|com.lcs.wc.product.LCSProduct|com.plugin76.p76$com_lcs_wc_product_LCSProduct|com.plugin76.P76_Pero$com_lcs_wc_product_LCSProduct\",\n        \"WCTYPE|com.lcs.wc.product.LCSProduct|com.plugin76.p76$com_lcs_wc_product_LCSProduct|com.plugin76.T1AG$com_lcs_wc_product_LCSProduct\",\n        \"WCTYPE|com.lcs.wc.product.LCSProduct|com.plugin76.p76$com_lcs_wc_product_LCSProduct|com.plugin76.t09Testing$com_lcs_wc_product_LCSProduct\",\n        \"WCTYPE|com.lcs.wc.product.LCSProduct|com.plugin76.p76$com_lcs_wc_product_LCSProduct|com.plugin76.vtMixed$com_lcs_wc_product_LCSProduct\",\n        \"WCTYPE|com.lcs.wc.season.LCSProductSeasonLink\",\n        \"WCTYPE|com.lcs.wc.season.LCSProductSeasonLink|com.plugin76.Apparel_Product$com_lcs_wc_season_LCSProductSeasonLink\",\n        \"WCTYPE|com.lcs.wc.season.LCSProductSeasonLink|com.plugin76.Apparel_Product$com_lcs_wc_season_LCSProductSeasonLink|com.plugin76.Childrens_Apparel_Product$com_lcs_wc_season_LCSProductSeasonLink\",\n        \"WCTYPE|com.lcs.wc.season.LCSProductSeasonLink|com.plugin76.Apparel_Product$com_lcs_wc_season_LCSProductSeasonLink|com.plugin76.Mens_Apparel_Product$com_lcs_wc_season_LCSProductSeasonLink\",\n        \"WCTYPE|com.lcs.wc.season.LCSProductSeasonLink|com.plugin76.Apparel_Product$com_lcs_wc_season_LCSProductSeasonLink|com.plugin76.Womens_Apparel_product$com_lcs_wc_season_LCSProductSeasonLink\",\n        \"WCTYPE|com.lcs.wc.season.LCSProductSeasonLink|com.plugin76.Footwear_Product$com_lcs_wc_season_LCSProductSeasonLink\",\n        \"WCTYPE|com.lcs.wc.season.LCSProductSeasonLink|com.plugin76.Footwear_Product$com_lcs_wc_season_LCSProductSeasonLink|com.plugin76.Childrens_Footwear_Product$com_lcs_wc_season_LCSProductSeasonLink\",\n        \"WCTYPE|com.lcs.wc.season.LCSProductSeasonLink|com.plugin76.Footwear_Product$com_lcs_wc_season_LCSProductSeasonLink|com.plugin76.Mens_Footwear_Product$com_lcs_wc_season_LCSProductSeasonLink\",\n        \"WCTYPE|com.lcs.wc.season.LCSProductSeasonLink|com.plugin76.Footwear_Product$com_lcs_wc_season_LCSProductSeasonLink|com.plugin76.Womens_Footwear_product$com_lcs_wc_season_LCSProductSeasonLink\",\n        \"WCTYPE|com.lcs.wc.season.LCSProductSeasonLink|com.plugin76.homeGoods$com_lcs_wc_season_LCSProductSeasonLink\",\n        \"WCTYPE|com.lcs.wc.season.LCSProductSeasonLink|com.plugin76.p76$com_lcs_wc_season_LCSProductSeasonLink\",\n        \"WCTYPE|com.lcs.wc.season.LCSProductSeasonLink|com.plugin76.p76$com_lcs_wc_season_LCSProductSeasonLink|com.plugin76.p76DefaultValues$com_lcs_wc_season_LCSProductSeasonLink\",\n        \"WCTYPE|com.lcs.wc.season.LCSProductSeasonLink|com.plugin76.p76$com_lcs_wc_season_LCSProductSeasonLink|com.plugin76.p76NotSettable$com_lcs_wc_season_LCSProductSeasonLink\",\n        \"WCTYPE|com.lcs.wc.season.LCSProductSeasonLink|com.plugin76.p76$com_lcs_wc_season_LCSProductSeasonLink|com.plugin76.p76NotUpdatable$com_lcs_wc_season_LCSProductSeasonLink\",\n        \"WCTYPE|com.lcs.wc.season.LCSProductSeasonLink|com.plugin76.p76$com_lcs_wc_season_LCSProductSeasonLink|com.plugin76.p76Required$com_lcs_wc_season_LCSProductSeasonLink\",\n        \"WCTYPE|com.lcs.wc.season.LCSProductSeasonLink|com.plugin76.p76$com_lcs_wc_season_LCSProductSeasonLink|com.plugin76.p76_vlad_testing$com_lcs_wc_season_LCSProductSeasonLink\",\n        \"WCTYPE|com.lcs.wc.season.LCSProductSeasonLink|com.plugin76.p76$com_lcs_wc_season_LCSProductSeasonLink|com.plugin76.P76_Pero$com_lcs_wc_season_LCSProductSeasonLink\",\n        \"WCTYPE|com.lcs.wc.season.LCSProductSeasonLink|com.plugin76.p76$com_lcs_wc_season_LCSProductSeasonLink|com.plugin76.T1AG$com_lcs_wc_season_LCSProductSeasonLink\",\n        \"WCTYPE|com.lcs.wc.season.LCSProductSeasonLink|com.plugin76.p76$com_lcs_wc_season_LCSProductSeasonLink|com.plugin76.t09Testing$com_lcs_wc_season_LCSProductSeasonLink\",\n        \"WCTYPE|com.lcs.wc.season.LCSProductSeasonLink|com.plugin76.p76$com_lcs_wc_season_LCSProductSeasonLink|com.plugin76.vtMixed$com_lcs_wc_season_LCSProductSeasonLink\",\n        \"WCTYPE|com.lcs.wc.season.LCSSeason\",\n        \"WCTYPE|com.lcs.wc.season.LCSSeason|com.plugin76.Apparel_Season\",\n        \"WCTYPE|com.lcs.wc.season.LCSSeason|com.plugin76.Apparel_Season|com.plugin76.Division_Apparel_Seasion\",\n        \"WCTYPE|com.lcs.wc.season.LCSSeason|com.plugin76.Footwear_Season\",\n        \"WCTYPE|com.lcs.wc.season.LCSSeason|com.plugin76.Footwear_Season|com.plugin76.Division_Footwear_Season\",\n        \"WCTYPE|com.lcs.wc.season.LCSSeason|com.plugin76.p76Season\",\n        \"WCTYPE|com.lcs.wc.product.LCSSKU\",\n        \"WCTYPE|com.lcs.wc.product.LCSSKU|com.plugin76.Apparel_Product$com_lcs_wc_product_LCSSKU\",\n        \"WCTYPE|com.lcs.wc.product.LCSSKU|com.plugin76.Apparel_Product$com_lcs_wc_product_LCSSKU|com.plugin76.Childrens_Apparel_Product$com_lcs_wc_product_LCSSKU\",\n        \"WCTYPE|com.lcs.wc.product.LCSSKU|com.plugin76.Apparel_Product$com_lcs_wc_product_LCSSKU|com.plugin76.Mens_Apparel_Product$com_lcs_wc_product_LCSSKU\",\n        \"WCTYPE|com.lcs.wc.product.LCSSKU|com.plugin76.Apparel_Product$com_lcs_wc_product_LCSSKU|com.plugin76.Womens_Apparel_product$com_lcs_wc_product_LCSSKU\",\n        \"WCTYPE|com.lcs.wc.product.LCSSKU|com.plugin76.Footwear_Product$com_lcs_wc_product_LCSSKU\",\n        \"WCTYPE|com.lcs.wc.product.LCSSKU|com.plugin76.Footwear_Product$com_lcs_wc_product_LCSSKU|com.plugin76.Childrens_Footwear_Product$com_lcs_wc_product_LCSSKU\",\n        \"WCTYPE|com.lcs.wc.product.LCSSKU|com.plugin76.Footwear_Product$com_lcs_wc_product_LCSSKU|com.plugin76.Mens_Footwear_Product$com_lcs_wc_product_LCSSKU\",\n        \"WCTYPE|com.lcs.wc.product.LCSSKU|com.plugin76.Footwear_Product$com_lcs_wc_product_LCSSKU|com.plugin76.Womens_Footwear_product$com_lcs_wc_product_LCSSKU\",\n        \"WCTYPE|com.lcs.wc.product.LCSSKU|com.plugin76.homeGoods$com_lcs_wc_product_LCSSKU\",\n        \"WCTYPE|com.lcs.wc.product.LCSSKU|com.plugin76.p76$com_lcs_wc_product_LCSSKU\",\n        \"WCTYPE|com.lcs.wc.product.LCSSKU|com.plugin76.p76$com_lcs_wc_product_LCSSKU|com.plugin76.p76DefaultValues$com_lcs_wc_product_LCSSKU\",\n        \"WCTYPE|com.lcs.wc.product.LCSSKU|com.plugin76.p76$com_lcs_wc_product_LCSSKU|com.plugin76.p76NotSettable$com_lcs_wc_product_LCSSKU\",\n        \"WCTYPE|com.lcs.wc.product.LCSSKU|com.plugin76.p76$com_lcs_wc_product_LCSSKU|com.plugin76.p76NotUpdatable$com_lcs_wc_product_LCSSKU\",\n        \"WCTYPE|com.lcs.wc.product.LCSSKU|com.plugin76.p76$com_lcs_wc_product_LCSSKU|com.plugin76.p76Required$com_lcs_wc_product_LCSSKU\",\n        \"WCTYPE|com.lcs.wc.product.LCSSKU|com.plugin76.p76$com_lcs_wc_product_LCSSKU|com.plugin76.p76_vlad_testing$com_lcs_wc_product_LCSSKU\",\n        \"WCTYPE|com.lcs.wc.product.LCSSKU|com.plugin76.p76$com_lcs_wc_product_LCSSKU|com.plugin76.P76_Pero$com_lcs_wc_product_LCSSKU\",\n        \"WCTYPE|com.lcs.wc.product.LCSSKU|com.plugin76.p76$com_lcs_wc_product_LCSSKU|com.plugin76.T1AG$com_lcs_wc_product_LCSSKU\",\n        \"WCTYPE|com.lcs.wc.product.LCSSKU|com.plugin76.p76$com_lcs_wc_product_LCSSKU|com.plugin76.t09Testing$com_lcs_wc_product_LCSSKU\",\n        \"WCTYPE|com.lcs.wc.product.LCSSKU|com.plugin76.p76$com_lcs_wc_product_LCSSKU|com.plugin76.vtMixed$com_lcs_wc_product_LCSSKU\",\n        \"WCTYPE|com.lcs.wc.sourcing.LCSSourcingConfig\",\n        \"WCTYPE|com.lcs.wc.specification.FlexSpecification\",\n        \"WCTYPE|com.lcs.wc.specification.FlexSpecification|com.plugin76.Apparel_Specification\",\n        \"WCTYPE|com.lcs.wc.specification.FlexSpecification|com.plugin76.Apparel_Specification|com.plugin76.Apparel_Test_Subtype\",\n        \"WCTYPE|com.lcs.wc.specification.FlexSpecification|com.plugin76.Footwear_Specification\",\n        \"WCTYPE|com.lcs.wc.supplier.LCSSupplier\",\n        \"WCTYPE|com.lcs.wc.supplier.LCSSupplier|com.plugin76.Agent_Supplier\",\n        \"WCTYPE|com.lcs.wc.supplier.LCSSupplier|com.plugin76.Factory_Supplier\",\n        \"WCTYPE|com.lcs.wc.supplier.LCSSupplier|com.plugin76.Supplier_Supplier\"\n    ]\n}"
+						},
+						"url": {
+							"raw": "http://10.140.31.18/Windchill/servlet/rest/p76/types/agvr",
+							"protocol": "http",
+							"host": [
+								"10",
+								"140",
+								"31",
+								"18"
+							],
+							"path": [
+								"Windchill",
+								"servlet",
+								"rest",
+								"p76",
+								"types",
+								"agvr"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/p76/types",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "ptc",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "p76sasa",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "CSRF_NONCE",
+								"type": "text",
+								"value": "4iwdW8bH+0TYvGN+1kZTPZOhvm+L/SxHkEcoMP+fmDG21VMXsF1QGrOqnQuq1wE6oRpTPbe2mHnijVZL1RQkYvHzyHXhilkR03t4Y5yQrRXo0g8up0ovDqymunaZgV4="
+							},
+							{
+								"key": "X-Auth-Token",
+								"type": "text",
+								"value": "8F090804908A729F429FA648DD8B19BE5AEBF605B1727768843961D83C38E8FF"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"ids\": [\n        \"WCTYPE|com.lcs.wc.flexbom.FlexBOMPart\",\n        \"WCTYPE|com.lcs.wc.flexbom.FlexBOMPart|com.plugin76.Labor_BOM$com_lcs_wc_flexbom_FlexBOMPart\",\n        \"WCTYPE|com.lcs.wc.flexbom.FlexBOMPart|com.plugin76.Materials_BOM$com_lcs_wc_flexbom_FlexBOMPart\",\n        \"WCTYPE|com.lcs.wc.flexbom.FlexBOMPart|com.plugin76.Materials_BOM$com_lcs_wc_flexbom_FlexBOMPart|com.plugin76_Materials_BOM$com_lcs_wc_flexbom_FlexBOMPart\",\n        \"WCTYPE|com.lcs.wc.flexbom.FlexBOMPart|com.plugin76.Materials_BOM$com_lcs_wc_flexbom_FlexBOMPart|com.plugin76_Materials_BOM$com_lcs_wc_flexbom_FlexBOMPart|com.plugin76.Apparel_Product_Materials_BOM$com_lcs_wc_flexbom_FlexBOMPart\",\n        \"WCTYPE|com.lcs.wc.flexbom.FlexBOMPart|com.plugin76.Materials_BOM$com_lcs_wc_flexbom_FlexBOMPart|com.plugin76_Materials_BOM$com_lcs_wc_flexbom_FlexBOMPart|com.plugin76.Apparel_Product_Materials_BOM$com_lcs_wc_flexbom_FlexBOMPart|com.plugin76.enabledButRestricted$com_lcs_wc_flexbom_FlexBOMPart\",\n        \"WCTYPE|com.lcs.wc.flexbom.FlexBOMPart|com.plugin76.Materials_BOM$com_lcs_wc_flexbom_FlexBOMPart|com.plugin76_Materials_BOM$com_lcs_wc_flexbom_FlexBOMPart|com.plugin76.Apparel_Product_Materials_BOM$com_lcs_wc_flexbom_FlexBOMPart|com.plugin76.notEnabledBOMType$com_lcs_wc_flexbom_FlexBOMPart\",\n        \"WCTYPE|com.lcs.wc.flexbom.FlexBOMPart|com.plugin76.Materials_BOM$com_lcs_wc_flexbom_FlexBOMPart|com.plugin76_Materials_BOM$com_lcs_wc_flexbom_FlexBOMPart|com.plugin76.Footwear_Product_Materials_BOM$com_lcs_wc_flexbom_FlexBOMPart\",\n        \"WCTYPE|com.lcs.wc.flexbom.FlexBOMLink\",\n        \"WCTYPE|com.lcs.wc.flexbom.FlexBOMLink|com.plugin76.Labor_BOM$com_lcs_wc_flexbom_FlexBOMLink\",\n        \"WCTYPE|com.lcs.wc.flexbom.FlexBOMLink|com.plugin76.Materials_BOM$com_lcs_wc_flexbom_FlexBOMLink\",\n        \"WCTYPE|com.lcs.wc.flexbom.FlexBOMLink|com.plugin76.Materials_BOM$com_lcs_wc_flexbom_FlexBOMLink|com.plugin76_Materials_BOM$com_lcs_wc_flexbom_FlexBOMLink\",\n        \"WCTYPE|com.lcs.wc.flexbom.FlexBOMLink|com.plugin76.Materials_BOM$com_lcs_wc_flexbom_FlexBOMLink|com.plugin76_Materials_BOM$com_lcs_wc_flexbom_FlexBOMLink|com.plugin76.Apparel_Product_Materials_BOM$com_lcs_wc_flexbom_FlexBOMLink\",\n        \"WCTYPE|com.lcs.wc.flexbom.FlexBOMLink|com.plugin76.Materials_BOM$com_lcs_wc_flexbom_FlexBOMLink|com.plugin76_Materials_BOM$com_lcs_wc_flexbom_FlexBOMLink|com.plugin76.Apparel_Product_Materials_BOM$com_lcs_wc_flexbom_FlexBOMLink|com.plugin76.enabledButRestricted$com_lcs_wc_flexbom_FlexBOMLink\",\n        \"WCTYPE|com.lcs.wc.flexbom.FlexBOMLink|com.plugin76.Materials_BOM$com_lcs_wc_flexbom_FlexBOMLink|com.plugin76_Materials_BOM$com_lcs_wc_flexbom_FlexBOMLink|com.plugin76.Apparel_Product_Materials_BOM$com_lcs_wc_flexbom_FlexBOMLink|com.plugin76.notEnabledBOMType$com_lcs_wc_flexbom_FlexBOMLink\",\n        \"WCTYPE|com.lcs.wc.flexbom.FlexBOMLink|com.plugin76.Materials_BOM$com_lcs_wc_flexbom_FlexBOMLink|com.plugin76_Materials_BOM$com_lcs_wc_flexbom_FlexBOMLink|com.plugin76.Footwear_Product_Materials_BOM$com_lcs_wc_flexbom_FlexBOMLink\",\n        \"WCTYPE|com.lcs.wc.color.LCSColor\",\n        \"WCTYPE|com.lcs.wc.color.LCSColor|com.plugin76.Artwork_Color\",\n        \"WCTYPE|com.lcs.wc.color.LCSColor|com.plugin76.Custom_Color\",\n        \"WCTYPE|com.lcs.wc.color.LCSColor|com.plugin76.p76testing\",\n        \"WCTYPE|com.lcs.wc.color.LCSColor|com.plugin76.PrintandPattern_Color\",\n        \"WCTYPE|com.lcs.wc.color.LCSColor|com.plugin76.Color_Solid\",\n        \"WCTYPE|com.lcs.wc.color.LCSColor|com.plugin76.Washes_Color\",\n        \"WCTYPE|com.lcs.wc.document.LCSDocument\",\n        \"WCTYPE|com.lcs.wc.document.LCSDocument|com.plugin76.3DModel_Document\",\n        \"WCTYPE|com.lcs.wc.document.LCSDocument|com.plugin76.Artwork_Document\",\n        \"WCTYPE|com.lcs.wc.document.LCSDocument|com.plugin76.ConceptDocuments_Document\",\n        \"WCTYPE|com.lcs.wc.document.LCSDocument|com.plugin76.FirstInsightImports_Documents\",\n        \"WCTYPE|com.lcs.wc.document.LCSDocument|com.plugin76.GeneratedTechPack_Document\",\n        \"WCTYPE|com.lcs.wc.document.LCSDocument|com.plugin76.ImagesPage_Document\",\n        \"WCTYPE|com.lcs.wc.document.LCSDocument|com.plugin76.ImagesPage_Document|com.plugin76.SubImagesPage_Document\",\n        \"WCTYPE|com.lcs.wc.document.LCSDocument|com.plugin76.ImagesPage_Document|com.plugin76.ImagesPageTurntable_Document\",\n        \"WCTYPE|com.lcs.wc.document.LCSDocument|com.plugin76.Manuals_Documents\",\n        \"WCTYPE|com.lcs.wc.document.LCSDocument|com.plugin76.Others_Documents\",\n        \"WCTYPE|com.lcs.wc.document.LCSDocument|com.plugin76.Photos_Documents\",\n        \"WCTYPE|com.lcs.wc.document.LCSDocument|com.plugin76.TestingDocuments_Document\",\n        \"WCTYPE|com.lcs.wc.material.LCSMaterial\",\n        \"WCTYPE|com.lcs.wc.material.LCSMaterial|com.plugin76.Apparel_Material$com_lcs_wc_material_LCSMaterial\",\n        \"WCTYPE|com.lcs.wc.material.LCSMaterial|com.plugin76.Embellishments_Material$com_lcs_wc_material_LCSMaterial\",\n        \"WCTYPE|com.lcs.wc.material.LCSMaterial|com.plugin76.Fabric_Material$com_lcs_wc_material_LCSMaterial\",\n        \"WCTYPE|com.lcs.wc.material.LCSMaterial|com.plugin76.Footwear_Material$com_lcs_wc_material_LCSMaterial\",\n        \"WCTYPE|com.lcs.wc.material.LCSMaterial|com.plugin76.Labor_Material$com_lcs_wc_material_LCSMaterial\",\n        \"WCTYPE|com.lcs.wc.material.LCSMaterial|com.plugin76.Leather_Material$com_lcs_wc_material_LCSMaterial\",\n        \"WCTYPE|com.lcs.wc.material.LCSMaterial|com.plugin76.p76testing$com_lcs_wc_material_LCSMaterial\",\n        \"WCTYPE|com.lcs.wc.material.LCSMaterial|com.plugin76.ProductPacking_Material$com_lcs_wc_material_LCSMaterial\",\n        \"WCTYPE|com.lcs.wc.material.LCSMaterial|com.plugin76.ShippingPacking_Material$com_lcs_wc_material_LCSMaterial\",\n        \"WCTYPE|com.lcs.wc.color.LCSPalette\",\n        \"WCTYPE|com.lcs.wc.color.LCSPalette|com.plugin76.Apparel_Palette$com_lcs_wc_color_LCSPalette\",\n        \"WCTYPE|com.lcs.wc.color.LCSPalette|com.plugin76.Footwear_Palette$com_lcs_wc_color_LCSPalette\",\n        \"WCTYPE|com.lcs.wc.placeholder.Placeholder\",\n        \"WCTYPE|com.lcs.wc.placeholder.Placeholder|com.plugin76.Apparel_Product$com_lcs_wc_placeholder_Placeholder\",\n        \"WCTYPE|com.lcs.wc.placeholder.Placeholder|com.plugin76.Apparel_Product$com_lcs_wc_placeholder_Placeholder|com.plugin76.Childrens_Apparel_Product$com_lcs_wc_placeholder_Placeholder\",\n        \"WCTYPE|com.lcs.wc.placeholder.Placeholder|com.plugin76.Apparel_Product$com_lcs_wc_placeholder_Placeholder|com.plugin76.Mens_Apparel_Product$com_lcs_wc_placeholder_Placeholder\",\n        \"WCTYPE|com.lcs.wc.placeholder.Placeholder|com.plugin76.Apparel_Product$com_lcs_wc_placeholder_Placeholder|com.plugin76.Womens_Apparel_product$com_lcs_wc_placeholder_Placeholder\",\n        \"WCTYPE|com.lcs.wc.placeholder.Placeholder|com.plugin76.Footwear_Product$com_lcs_wc_placeholder_Placeholder\",\n        \"WCTYPE|com.lcs.wc.placeholder.Placeholder|com.plugin76.Footwear_Product$com_lcs_wc_placeholder_Placeholder|com.plugin76.Childrens_Footwear_Product$com_lcs_wc_placeholder_Placeholder\",\n        \"WCTYPE|com.lcs.wc.placeholder.Placeholder|com.plugin76.Footwear_Product$com_lcs_wc_placeholder_Placeholder|com.plugin76.Mens_Footwear_Product$com_lcs_wc_placeholder_Placeholder\",\n        \"WCTYPE|com.lcs.wc.placeholder.Placeholder|com.plugin76.Footwear_Product$com_lcs_wc_placeholder_Placeholder|com.plugin76.Womens_Footwear_product$com_lcs_wc_placeholder_Placeholder\",\n        \"WCTYPE|com.lcs.wc.placeholder.Placeholder|com.plugin76.homeGoods$com_lcs_wc_placeholder_Placeholder\",\n        \"WCTYPE|com.lcs.wc.placeholder.Placeholder|com.plugin76.p76$com_lcs_wc_placeholder_Placeholder\",\n        \"WCTYPE|com.lcs.wc.placeholder.Placeholder|com.plugin76.p76$com_lcs_wc_placeholder_Placeholder|com.plugin76.p76DefaultValues$com_lcs_wc_placeholder_Placeholder\",\n        \"WCTYPE|com.lcs.wc.placeholder.Placeholder|com.plugin76.p76$com_lcs_wc_placeholder_Placeholder|com.plugin76.p76NotSettable$com_lcs_wc_placeholder_Placeholder\",\n        \"WCTYPE|com.lcs.wc.placeholder.Placeholder|com.plugin76.p76$com_lcs_wc_placeholder_Placeholder|com.plugin76.p76NotUpdatable$com_lcs_wc_placeholder_Placeholder\",\n        \"WCTYPE|com.lcs.wc.placeholder.Placeholder|com.plugin76.p76$com_lcs_wc_placeholder_Placeholder|com.plugin76.p76Required$com_lcs_wc_placeholder_Placeholder\",\n        \"WCTYPE|com.lcs.wc.placeholder.Placeholder|com.plugin76.p76$com_lcs_wc_placeholder_Placeholder|com.plugin76.p76_vlad_testing$com_lcs_wc_placeholder_Placeholder\",\n        \"WCTYPE|com.lcs.wc.placeholder.Placeholder|com.plugin76.p76$com_lcs_wc_placeholder_Placeholder|com.plugin76.P76_Pero$com_lcs_wc_placeholder_Placeholder\",\n        \"WCTYPE|com.lcs.wc.placeholder.Placeholder|com.plugin76.p76$com_lcs_wc_placeholder_Placeholder|com.plugin76.T1AG$com_lcs_wc_placeholder_Placeholder\",\n        \"WCTYPE|com.lcs.wc.placeholder.Placeholder|com.plugin76.p76$com_lcs_wc_placeholder_Placeholder|com.plugin76.t09Testing$com_lcs_wc_placeholder_Placeholder\",\n        \"WCTYPE|com.lcs.wc.placeholder.Placeholder|com.plugin76.p76$com_lcs_wc_placeholder_Placeholder|com.plugin76.vtMixed$com_lcs_wc_placeholder_Placeholder\",\n        \"WCTYPE|com.lcs.wc.product.LCSProduct\",\n        \"WCTYPE|com.lcs.wc.product.LCSProduct|com.plugin76.Apparel_Product$com_lcs_wc_product_LCSProduct\",\n        \"WCTYPE|com.lcs.wc.product.LCSProduct|com.plugin76.Apparel_Product$com_lcs_wc_product_LCSProduct|com.plugin76.Childrens_Apparel_Product$com_lcs_wc_product_LCSProduct\",\n        \"WCTYPE|com.lcs.wc.product.LCSProduct|com.plugin76.Apparel_Product$com_lcs_wc_product_LCSProduct|com.plugin76.Mens_Apparel_Product$com_lcs_wc_product_LCSProduct\",\n        \"WCTYPE|com.lcs.wc.product.LCSProduct|com.plugin76.Apparel_Product$com_lcs_wc_product_LCSProduct|com.plugin76.Womens_Apparel_product$com_lcs_wc_product_LCSProduct\",\n        \"WCTYPE|com.lcs.wc.product.LCSProduct|com.plugin76.Footwear_Product$com_lcs_wc_product_LCSProduct\",\n        \"WCTYPE|com.lcs.wc.product.LCSProduct|com.plugin76.Footwear_Product$com_lcs_wc_product_LCSProduct|com.plugin76.Childrens_Footwear_Product$com_lcs_wc_product_LCSProduct\",\n        \"WCTYPE|com.lcs.wc.product.LCSProduct|com.plugin76.Footwear_Product$com_lcs_wc_product_LCSProduct|com.plugin76.Mens_Footwear_Product$com_lcs_wc_product_LCSProduct\",\n        \"WCTYPE|com.lcs.wc.product.LCSProduct|com.plugin76.Footwear_Product$com_lcs_wc_product_LCSProduct|com.plugin76.Womens_Footwear_product$com_lcs_wc_product_LCSProduct\",\n        \"WCTYPE|com.lcs.wc.product.LCSProduct|com.plugin76.homeGoods$com_lcs_wc_product_LCSProduct\",\n        \"WCTYPE|com.lcs.wc.product.LCSProduct|com.plugin76.p76$com_lcs_wc_product_LCSProduct\",\n        \"WCTYPE|com.lcs.wc.product.LCSProduct|com.plugin76.p76$com_lcs_wc_product_LCSProduct|com.plugin76.p76DefaultValues$com_lcs_wc_product_LCSProduct\",\n        \"WCTYPE|com.lcs.wc.product.LCSProduct|com.plugin76.p76$com_lcs_wc_product_LCSProduct|com.plugin76.p76NotSettable$com_lcs_wc_product_LCSProduct\",\n        \"WCTYPE|com.lcs.wc.product.LCSProduct|com.plugin76.p76$com_lcs_wc_product_LCSProduct|com.plugin76.p76NotUpdatable$com_lcs_wc_product_LCSProduct\",\n        \"WCTYPE|com.lcs.wc.product.LCSProduct|com.plugin76.p76$com_lcs_wc_product_LCSProduct|com.plugin76.p76Required$com_lcs_wc_product_LCSProduct\",\n        \"WCTYPE|com.lcs.wc.product.LCSProduct|com.plugin76.p76$com_lcs_wc_product_LCSProduct|com.plugin76.p76_vlad_testing$com_lcs_wc_product_LCSProduct\",\n        \"WCTYPE|com.lcs.wc.product.LCSProduct|com.plugin76.p76$com_lcs_wc_product_LCSProduct|com.plugin76.P76_Pero$com_lcs_wc_product_LCSProduct\",\n        \"WCTYPE|com.lcs.wc.product.LCSProduct|com.plugin76.p76$com_lcs_wc_product_LCSProduct|com.plugin76.T1AG$com_lcs_wc_product_LCSProduct\",\n        \"WCTYPE|com.lcs.wc.product.LCSProduct|com.plugin76.p76$com_lcs_wc_product_LCSProduct|com.plugin76.t09Testing$com_lcs_wc_product_LCSProduct\",\n        \"WCTYPE|com.lcs.wc.product.LCSProduct|com.plugin76.p76$com_lcs_wc_product_LCSProduct|com.plugin76.vtMixed$com_lcs_wc_product_LCSProduct\",\n        \"WCTYPE|com.lcs.wc.season.LCSProductSeasonLink\",\n        \"WCTYPE|com.lcs.wc.season.LCSProductSeasonLink|com.plugin76.Apparel_Product$com_lcs_wc_season_LCSProductSeasonLink\",\n        \"WCTYPE|com.lcs.wc.season.LCSProductSeasonLink|com.plugin76.Apparel_Product$com_lcs_wc_season_LCSProductSeasonLink|com.plugin76.Childrens_Apparel_Product$com_lcs_wc_season_LCSProductSeasonLink\",\n        \"WCTYPE|com.lcs.wc.season.LCSProductSeasonLink|com.plugin76.Apparel_Product$com_lcs_wc_season_LCSProductSeasonLink|com.plugin76.Mens_Apparel_Product$com_lcs_wc_season_LCSProductSeasonLink\",\n        \"WCTYPE|com.lcs.wc.season.LCSProductSeasonLink|com.plugin76.Apparel_Product$com_lcs_wc_season_LCSProductSeasonLink|com.plugin76.Womens_Apparel_product$com_lcs_wc_season_LCSProductSeasonLink\",\n        \"WCTYPE|com.lcs.wc.season.LCSProductSeasonLink|com.plugin76.Footwear_Product$com_lcs_wc_season_LCSProductSeasonLink\",\n        \"WCTYPE|com.lcs.wc.season.LCSProductSeasonLink|com.plugin76.Footwear_Product$com_lcs_wc_season_LCSProductSeasonLink|com.plugin76.Childrens_Footwear_Product$com_lcs_wc_season_LCSProductSeasonLink\",\n        \"WCTYPE|com.lcs.wc.season.LCSProductSeasonLink|com.plugin76.Footwear_Product$com_lcs_wc_season_LCSProductSeasonLink|com.plugin76.Mens_Footwear_Product$com_lcs_wc_season_LCSProductSeasonLink\",\n        \"WCTYPE|com.lcs.wc.season.LCSProductSeasonLink|com.plugin76.Footwear_Product$com_lcs_wc_season_LCSProductSeasonLink|com.plugin76.Womens_Footwear_product$com_lcs_wc_season_LCSProductSeasonLink\",\n        \"WCTYPE|com.lcs.wc.season.LCSProductSeasonLink|com.plugin76.homeGoods$com_lcs_wc_season_LCSProductSeasonLink\",\n        \"WCTYPE|com.lcs.wc.season.LCSProductSeasonLink|com.plugin76.p76$com_lcs_wc_season_LCSProductSeasonLink\",\n        \"WCTYPE|com.lcs.wc.season.LCSProductSeasonLink|com.plugin76.p76$com_lcs_wc_season_LCSProductSeasonLink|com.plugin76.p76DefaultValues$com_lcs_wc_season_LCSProductSeasonLink\",\n        \"WCTYPE|com.lcs.wc.season.LCSProductSeasonLink|com.plugin76.p76$com_lcs_wc_season_LCSProductSeasonLink|com.plugin76.p76NotSettable$com_lcs_wc_season_LCSProductSeasonLink\",\n        \"WCTYPE|com.lcs.wc.season.LCSProductSeasonLink|com.plugin76.p76$com_lcs_wc_season_LCSProductSeasonLink|com.plugin76.p76NotUpdatable$com_lcs_wc_season_LCSProductSeasonLink\",\n        \"WCTYPE|com.lcs.wc.season.LCSProductSeasonLink|com.plugin76.p76$com_lcs_wc_season_LCSProductSeasonLink|com.plugin76.p76Required$com_lcs_wc_season_LCSProductSeasonLink\",\n        \"WCTYPE|com.lcs.wc.season.LCSProductSeasonLink|com.plugin76.p76$com_lcs_wc_season_LCSProductSeasonLink|com.plugin76.p76_vlad_testing$com_lcs_wc_season_LCSProductSeasonLink\",\n        \"WCTYPE|com.lcs.wc.season.LCSProductSeasonLink|com.plugin76.p76$com_lcs_wc_season_LCSProductSeasonLink|com.plugin76.P76_Pero$com_lcs_wc_season_LCSProductSeasonLink\",\n        \"WCTYPE|com.lcs.wc.season.LCSProductSeasonLink|com.plugin76.p76$com_lcs_wc_season_LCSProductSeasonLink|com.plugin76.T1AG$com_lcs_wc_season_LCSProductSeasonLink\",\n        \"WCTYPE|com.lcs.wc.season.LCSProductSeasonLink|com.plugin76.p76$com_lcs_wc_season_LCSProductSeasonLink|com.plugin76.t09Testing$com_lcs_wc_season_LCSProductSeasonLink\",\n        \"WCTYPE|com.lcs.wc.season.LCSProductSeasonLink|com.plugin76.p76$com_lcs_wc_season_LCSProductSeasonLink|com.plugin76.vtMixed$com_lcs_wc_season_LCSProductSeasonLink\",\n        \"WCTYPE|com.lcs.wc.season.LCSSeason\",\n        \"WCTYPE|com.lcs.wc.season.LCSSeason|com.plugin76.Apparel_Season\",\n        \"WCTYPE|com.lcs.wc.season.LCSSeason|com.plugin76.Apparel_Season|com.plugin76.Division_Apparel_Seasion\",\n        \"WCTYPE|com.lcs.wc.season.LCSSeason|com.plugin76.Footwear_Season\",\n        \"WCTYPE|com.lcs.wc.season.LCSSeason|com.plugin76.Footwear_Season|com.plugin76.Division_Footwear_Season\",\n        \"WCTYPE|com.lcs.wc.season.LCSSeason|com.plugin76.p76Season\",\n        \"WCTYPE|com.lcs.wc.product.LCSSKU\",\n        \"WCTYPE|com.lcs.wc.product.LCSSKU|com.plugin76.Apparel_Product$com_lcs_wc_product_LCSSKU\",\n        \"WCTYPE|com.lcs.wc.product.LCSSKU|com.plugin76.Apparel_Product$com_lcs_wc_product_LCSSKU|com.plugin76.Childrens_Apparel_Product$com_lcs_wc_product_LCSSKU\",\n        \"WCTYPE|com.lcs.wc.product.LCSSKU|com.plugin76.Apparel_Product$com_lcs_wc_product_LCSSKU|com.plugin76.Mens_Apparel_Product$com_lcs_wc_product_LCSSKU\",\n        \"WCTYPE|com.lcs.wc.product.LCSSKU|com.plugin76.Apparel_Product$com_lcs_wc_product_LCSSKU|com.plugin76.Womens_Apparel_product$com_lcs_wc_product_LCSSKU\",\n        \"WCTYPE|com.lcs.wc.product.LCSSKU|com.plugin76.Footwear_Product$com_lcs_wc_product_LCSSKU\",\n        \"WCTYPE|com.lcs.wc.product.LCSSKU|com.plugin76.Footwear_Product$com_lcs_wc_product_LCSSKU|com.plugin76.Childrens_Footwear_Product$com_lcs_wc_product_LCSSKU\",\n        \"WCTYPE|com.lcs.wc.product.LCSSKU|com.plugin76.Footwear_Product$com_lcs_wc_product_LCSSKU|com.plugin76.Mens_Footwear_Product$com_lcs_wc_product_LCSSKU\",\n        \"WCTYPE|com.lcs.wc.product.LCSSKU|com.plugin76.Footwear_Product$com_lcs_wc_product_LCSSKU|com.plugin76.Womens_Footwear_product$com_lcs_wc_product_LCSSKU\",\n        \"WCTYPE|com.lcs.wc.product.LCSSKU|com.plugin76.homeGoods$com_lcs_wc_product_LCSSKU\",\n        \"WCTYPE|com.lcs.wc.product.LCSSKU|com.plugin76.p76$com_lcs_wc_product_LCSSKU\",\n        \"WCTYPE|com.lcs.wc.product.LCSSKU|com.plugin76.p76$com_lcs_wc_product_LCSSKU|com.plugin76.p76DefaultValues$com_lcs_wc_product_LCSSKU\",\n        \"WCTYPE|com.lcs.wc.product.LCSSKU|com.plugin76.p76$com_lcs_wc_product_LCSSKU|com.plugin76.p76NotSettable$com_lcs_wc_product_LCSSKU\",\n        \"WCTYPE|com.lcs.wc.product.LCSSKU|com.plugin76.p76$com_lcs_wc_product_LCSSKU|com.plugin76.p76NotUpdatable$com_lcs_wc_product_LCSSKU\",\n        \"WCTYPE|com.lcs.wc.product.LCSSKU|com.plugin76.p76$com_lcs_wc_product_LCSSKU|com.plugin76.p76Required$com_lcs_wc_product_LCSSKU\",\n        \"WCTYPE|com.lcs.wc.product.LCSSKU|com.plugin76.p76$com_lcs_wc_product_LCSSKU|com.plugin76.p76_vlad_testing$com_lcs_wc_product_LCSSKU\",\n        \"WCTYPE|com.lcs.wc.product.LCSSKU|com.plugin76.p76$com_lcs_wc_product_LCSSKU|com.plugin76.P76_Pero$com_lcs_wc_product_LCSSKU\",\n        \"WCTYPE|com.lcs.wc.product.LCSSKU|com.plugin76.p76$com_lcs_wc_product_LCSSKU|com.plugin76.T1AG$com_lcs_wc_product_LCSSKU\",\n        \"WCTYPE|com.lcs.wc.product.LCSSKU|com.plugin76.p76$com_lcs_wc_product_LCSSKU|com.plugin76.t09Testing$com_lcs_wc_product_LCSSKU\",\n        \"WCTYPE|com.lcs.wc.product.LCSSKU|com.plugin76.p76$com_lcs_wc_product_LCSSKU|com.plugin76.vtMixed$com_lcs_wc_product_LCSSKU\",\n        \"WCTYPE|com.lcs.wc.sourcing.LCSSourcingConfig\",\n        \"WCTYPE|com.lcs.wc.specification.FlexSpecification\",\n        \"WCTYPE|com.lcs.wc.specification.FlexSpecification|com.plugin76.Apparel_Specification\",\n        \"WCTYPE|com.lcs.wc.specification.FlexSpecification|com.plugin76.Apparel_Specification|com.plugin76.Apparel_Test_Subtype\",\n        \"WCTYPE|com.lcs.wc.specification.FlexSpecification|com.plugin76.Footwear_Specification\",\n        \"WCTYPE|com.lcs.wc.supplier.LCSSupplier\",\n        \"WCTYPE|com.lcs.wc.supplier.LCSSupplier|com.plugin76.Agent_Supplier\",\n        \"WCTYPE|com.lcs.wc.supplier.LCSSupplier|com.plugin76.Factory_Supplier\",\n        \"WCTYPE|com.lcs.wc.supplier.LCSSupplier|com.plugin76.Supplier_Supplier\"\n    ]\n}"
+						},
+						"url": {
+							"raw": "http://10.140.31.18/Windchill/servlet/rest/p76/types",
+							"protocol": "http",
+							"host": [
+								"10",
+								"140",
+								"31",
+								"18"
+							],
+							"path": [
+								"Windchill",
+								"servlet",
+								"rest",
+								"p76",
+								"types"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
