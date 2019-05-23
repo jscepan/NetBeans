@@ -1,12 +1,16 @@
 package com.mycompany.zadatak;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.dataformat.xml.XmlMapper;
 import java.io.BufferedReader;
+import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.util.Base64;
 import java.util.Scanner;
 import java.util.logging.Level;
@@ -15,85 +19,25 @@ import java.util.logging.Logger;
 public class Config {
 
     private final static File FILE_CONFIG = new File("config.xml");
-    private String name;
-    private String username;
-    private String password;
     private static Config config;
+    private static User user;
+    private static URL url;
 
-    public Config(String name, String username, String password) {
-        this.name = name;
-        this.username = username;
-        this.password = password;
+    private Config() {
     }
 
-    public String getName() {
-        return name;
+    private Config(User user, URL url) {
+        this.user = user;
+        this.url = url;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getUsername() {
-        return username;
-    }
-
-    public void setUsername(String username) {
-        this.username = username;
-    }
-
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
-    }
-
-    public static Config getConfig() {
-        return config;
-    }
-
-    public static void setConfig(Config config) {
-        Config.config = config;
-    }
-
-    public Config() {
-    }
-
-    public static Config createConfigFail() {
+    public static void loadConfigurations() {
         if (FILE_CONFIG.exists()) {
             System.out.println("Fajl postoji");
             importFromFile();
         } else {
             System.out.println("Fajl ne postoji");
             createFile();
-        }
-        return config;
-    }
-
-    private static void createFile() {
-//        Scanner sc = new Scanner(System.in);
-//        System.out.println("Uneti ime");
-        String nameVar = "ss";//sc.nextLine();
-//        System.out.println("Uneti password:");
-        String passVar = "dd";//sc.nextLine();
-//        System.out.println("Uneti url:");
-        String urlVar = "ff";//sc.nextLine();
-        config = new Config(nameVar, passVar, urlVar);
-        System.out.println("kreiram config sa: n: " + config.name + " p: " + config.password + " u: " + config.username);
-
-        try {
-            //serialize our Java object into the XML String
-            XmlMapper xmlMapper = new XmlMapper();
-            String xml = xmlMapper.writeValueAsString(config);
-
-            String probaFormatiran = Base64.getEncoder().encodeToString(xml.getBytes());
-
-            //serialize our Java object to the XML file
-            xmlMapper.writeValue(FILE_CONFIG, probaFormatiran);
-        } catch (IOException e) {
-            e.getMessage();
         }
     }
 
@@ -106,15 +50,76 @@ public class Config {
                 sb.append(line);
             }
             String xml3 = sb.toString();
-            XmlMapper xmlMapper = new XmlMapper();
-            Config config = xmlMapper.readValue(xml3, Config.class);
+            System.out.println(xml3);
 
-//            byte[] probaDecoding = Base64.getDecoder().decode(config);
-//            String probaVracen = new String(probaDecoding);
-            
-            System.out.println("ucitano je iz fajla: n: " + config.name + " p: " + config.password + " u: " + config.username);
+            //Deserialize From the XML String
+            XmlMapper xmlMapper = new XmlMapper();
+            user = xmlMapper.readValue(xml3, User.class);
+            System.out.println("ucitano je iz fajla: u: " + config.user.getUsername() + " p: " + config.user.getPassword());
+
+            //create new configuration
+            config = new Config(user, url);
+            System.out.println("kreiracu config sa: username: " + config.user.getUsername() + ", password: " + config.user.getPassword() + ", a url je: " + url);
+            System.out.println(user.getUsername() + " " + user.getPassword());
         } catch (IOException e) {
             e.getMessage();
         }
+    }
+
+    private static void createFile() {
+//        Scanner sc = new Scanner(System.in);
+//        System.out.println("Uneti ime");
+        String nameVar = "ss";//sc.nextLine();
+//        System.out.println("Uneti password:");
+        String passVar = "dd";//sc.nextLine();
+//        System.out.println("Uneti url:");
+        String urlVar = "ff";//sc.nextLine();
+
+        //create user and file url
+        user = new User(nameVar, passVar);
+        try {
+            url = new URL(urlVar);
+        } catch (MalformedURLException ex) {
+            ex.getMessage();
+        }
+
+        //create new configuration
+        config = new Config(user, url);
+        System.out.println("kreiracu config sa: username: " + config.user.getUsername() + ", password: " + config.user.getPassword() + ", a url je: " + urlVar);
+
+        try {
+            //serialize our Java object into the XML String
+            XmlMapper xmlMapper = new XmlMapper();
+
+            ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
+            System.out.println("ovde");
+            xmlMapper.writeValue(byteArrayOutputStream, config);
+            System.out.println("sad ovde");
+            //       String xml = xmlMapper.writeValueAsString(config);
+
+            System.out.println("ovde stigao");
+            //     System.out.println("serialize our Java object into the XML String - xml: " + xml);
+
+//            //serialize our Java object to the XML file
+//            XmlMapper xmlMapper = new XmlMapper();
+//            xmlMapper.writeValue(FILE_CONFIG, config);
+        } catch (IOException ex) {
+            Logger.getLogger(Config.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+
+    private static String encodeInBase64(String string) {
+        //coding of string
+        String stringFormatted = Base64.getEncoder().encodeToString(string.getBytes());
+        System.out.println("Tekst u base64: " + stringFormatted);
+        return stringFormatted;
+    }
+
+    private static String decodeInBase64(String string) {
+        //decoding of string
+        byte[] varDecoding = Base64.getDecoder().decode(string);
+        String varDecoded = new String(varDecoding);
+        System.out.println("Tekst vracen: " + varDecoded);
+        return varDecoded;
     }
 }
