@@ -1,5 +1,8 @@
-package com.mycompany.zadatak2.assignmentModel;
+package com.mycompany.zadatak2.assignmentModel.csrf;
 //import com.fasterxml.jackson.annotation.JsonTypeName;
+
+import com.mycompany.zadatak2.assignmentModel.csrf.Attributes;
+
 
 //@JsonTypeName("items")
 //@JsonTypeInfo(include = JsonTypeInfo.As.WRAPPER_OBJECT, use = JsonTypeInfo.Id.NAME)

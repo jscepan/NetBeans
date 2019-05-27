@@ -1,11 +1,10 @@
-package com.mycompany.zadatak2.assignmentModel;
+package com.mycompany.vezbajsonobjectmapper;
 
+import java.util.ArrayList;
 import java.util.List;
 
-public class Properties extends ConnectionToBase {
-
-    public static final String PART_URL = "/p76/types/properties";
-    private List<String> ids;
+public class Properties {
+            List<String> ids;
 
     public Properties(List<String> ids) {
         this.ids = ids;
@@ -21,5 +20,6 @@ public class Properties extends ConnectionToBase {
     public void setIds(List<String> ids) {
         this.ids = ids;
     }
-
+            
+            
 }

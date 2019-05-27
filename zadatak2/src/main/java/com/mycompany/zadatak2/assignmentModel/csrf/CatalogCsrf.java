@@ -1,22 +1,24 @@
-package com.mycompany.zadatak2.assignmentModel;
+package com.mycompany.zadatak2.assignmentModel.csrf;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.mycompany.zadatak2.assignmentModel.ConnectionToBase;
 import java.io.IOException;
 import java.net.HttpURLConnection;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-public class CatalogCsrf {
+public class CatalogCsrf extends ConnectionToBase {
 
     private List<Csrf> items;
-    static Config config;
-
-    public CatalogCsrf() {
-    }
+    private static final String URL_PART ="/security/csrf";
+//    static Config config;
 
     public CatalogCsrf(List<Csrf> items) {
         this.items = items;
+    }
+
+    public CatalogCsrf() {
     }
 
     public List<Csrf> getItems() {
@@ -27,18 +29,9 @@ public class CatalogCsrf {
         this.items = items;
     }
 
-    public static Config getConfig() {
-        return config;
-    }
-
-    public static void setConfig(Config config) {
-        CatalogCsrf.config = config;
-    }
-
     public static String getCsrfCode() {
         try {
-            config = Config.loadConfigurations();
-            HttpURLConnection con = ConnectionToBase.createConnection(config.getUrl() + "/security/csrf", "GET");
+            con = ConnectionToBase.createConnection(URL_PART, "GET");
             int responseCode = con.getResponseCode();
 
 //geting answer and parsing of response
@@ -51,7 +44,7 @@ public class CatalogCsrf {
         } catch (IOException ex) {
             Logger.getLogger(Csrf.class.getName()).log(Level.SEVERE, null, ex);
         }
-        return "greska";
+        return null;
     }
 
     @Override

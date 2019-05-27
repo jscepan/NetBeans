@@ -1,5 +1,6 @@
 package com.mycompany.zadatak2.assignmentModel;
 
+import com.mycompany.zadatak2.assignmentController.Config;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -14,14 +15,12 @@ import java.util.logging.Logger;
 public class ConnectionToBase {
 
     private static URL urlSite;
-    private static HttpURLConnection con;
-    private static Config config;
+    public static HttpURLConnection con;
 
     public static HttpURLConnection createConnection(String url, String method, String... property) {
 
         try {
-            config = Config.loadConfigurations();
-            urlSite = new URL(url);
+            urlSite = new URL(Config.config.getUrl() + url);
             con = (HttpURLConnection) urlSite.openConnection();
             con.setRequestMethod(method);
             for (int i = 0; i < (property.length - 1); i += 2) {
@@ -30,7 +29,7 @@ public class ConnectionToBase {
             Authenticator.setDefault(new Authenticator() {
                 protected PasswordAuthentication getPasswordAuthentication() {
                     return new PasswordAuthentication(
-                            config.getUserName(), (Config.decodeInBase64(config.getPassword())).toCharArray());
+                            Config.config.getUserName(), (Config.decodeInBase64(Config.config.getPassword())).toCharArray());
                 }
             });
             con.setDoOutput(true); //Ensure the Connection Will Be Used to Send Content. Otherwise, we’ll not be able to write content to the connection output stream
@@ -44,7 +43,7 @@ public class ConnectionToBase {
         return con;
     }
 
-    static String readStringFromConnection(HttpURLConnection con) {
+    public static String readStringFromConnection(HttpURLConnection con) {
         String response = null;
         BufferedReader in = null;
         try {
@@ -54,7 +53,7 @@ public class ConnectionToBase {
             while ((inputLine = in.readLine()) != null) {
                 content.append(inputLine);
             }
-            response=content.toString();
+            response = content.toString();
         } catch (IOException ex) {
             Logger.getLogger(ConnectionToBase.class.getName()).log(Level.SEVERE, null, ex);
         } finally {

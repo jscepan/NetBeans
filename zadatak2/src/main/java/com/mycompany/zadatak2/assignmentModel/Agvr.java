@@ -2,15 +2,15 @@ package com.mycompany.zadatak2.assignmentModel;
 
 import java.util.List;
 
-public class Absr extends ConnectionToBase {
+public class Agvr extends ConnectionToBase {
 
-    public static final String PART_URL = "/p76/types/absr";
+    public static final String PART_URL = "/p76/types/agvr";
     private List<String> ids;
 
-    public Absr() {
+    public Agvr() {
     }
 
-    public Absr(List<String> ids) {
+    public Agvr(List<String> ids) {
         this.ids = ids;
     }
 
@@ -21,5 +21,5 @@ public class Absr extends ConnectionToBase {
     public void setIds(List<String> ids) {
         this.ids = ids;
     }
-}
 
+}

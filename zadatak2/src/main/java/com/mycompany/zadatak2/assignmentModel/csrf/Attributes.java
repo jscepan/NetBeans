@@ -1,4 +1,4 @@
-package com.mycompany.zadatak2.assignmentModel;
+package com.mycompany.zadatak2.assignmentModel.csrf;
 
 public class Attributes{
 

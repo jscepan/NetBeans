@@ -1,20 +1,8 @@
 package com.mycompany.vezbajsonobjectmapper;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonTypeInfo;
 import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.core.type.TypeReference;
-import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.fasterxml.jackson.databind.introspect.AnnotatedMember;
-import com.fasterxml.jackson.databind.introspect.JacksonAnnotationIntrospector;
-import java.io.File;
 import java.io.IOException;
-import java.util.Map;
-import java.util.Optional;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-import com.google.gson.Gson;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -63,10 +51,20 @@ public class Main {
 
         System.out.println(jsonDataString);
 
-        Fleet deserializedFleet = mapper.readValue(jsonDataString, Fleet.class);
-        System.out.println("ovo je: " +deserializedFleet.getVehicles().get(0));
-        System.out.println("ovo je : " + deserializedFleet.getVehicles().get(1));
-        
-        
+//        Fleet deserializedFleet = mapper.readValue(jsonDataString, Fleet.class);
+//        System.out.println("ovo je: " + deserializedFleet.getVehicles().get(0));
+//        System.out.println("ovo je : " + deserializedFleet.getVehicles().get(1));
+
+        List<String> ids = new ArrayList<>();
+        ids.add("com.lcs.wc.flexbom.FlexBOMLink.designBomCommentsKey");
+        ids.add("com.lcs.wc.color.isCMYKEnabled");
+        ids.add("com.lcs.wc.color.cmyk.InternalKeyForC");
+        ids.add("com.lcs.wc.color.cmyk.InternalKeyForM");
+        ids.add("com.lcs.wc.color.cmyk.InternalKeyForY");
+        ids.add("com.lcs.wc.color.cmyk.InternalKeyForK");
+        ids.add("com.lcs.wc.color.cmyk.InternalKeyForIsCMYK");
+        Properties p = new Properties(ids);
+        String s = mapper.writeValueAsString(p);
+        System.out.println(s);
     }
 }

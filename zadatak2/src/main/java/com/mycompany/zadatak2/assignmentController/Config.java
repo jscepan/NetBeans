@@ -1,27 +1,29 @@
-package com.mycompany.zadatak2.assignmentModel;
+package com.mycompany.zadatak2.assignmentController;
 
 import com.fasterxml.jackson.dataformat.xml.XmlMapper;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.Base64;
+import java.util.Scanner;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
 public class Config {
 
     private final static File FILE_CONFIG = new File("config.xml");
-    private static Config config;
+    public static Config config;
     private String userName;
     private String password;
     private String url;
 
-    private Config() {
+    public Config() {
     }
 
-    private Config(String userName, String password, String url) {
+    public Config(String userName, String password, String url) {
         this.userName = userName;
         this.password = password;
         this.url = url;
@@ -51,13 +53,18 @@ public class Config {
         this.url = url;
     }
 
-    public static Config loadConfigurations() {
+    @Override
+    public String toString() {
+        return "Config{" + "userName=" + userName + ", password=" + password + ", url=" + url + '}';
+    }
+
+
+
+    public static void loadConfigurations() {
         if (FILE_CONFIG.exists()) {
             importFromFile();
-            return config;
         } else {
             createFile();
-            return config;
         }
     }
 
@@ -74,25 +81,27 @@ public class Config {
 //Deserialize From the XML String
             XmlMapper xmlMapper = new XmlMapper();
             config = xmlMapper.readValue(xml3, Config.class);
+        } catch (FileNotFoundException ex) {
+            Logger.getLogger(Config.class.getName()).log(Level.SEVERE, null, ex);
         } catch (IOException ex) {
             Logger.getLogger(Config.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
 
     private static void createFile() {
-//        Scanner sc = new Scanner(System.in);
-//        System.out.println("Uneti ime");
-        String nameVar = "wcadmin";//sc.nextLine();
-//        System.out.println("Uneti password:");
-        String passVar = "ptc";//sc.nextLine();
-//        System.out.println("Uneti url:");
-        String urlVar = "http://10.140.31.18/Windchill/servlet/rest";//sc.nextLine();
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Uneti ime");
+        String nameVar = sc.nextLine();
+        System.out.println("Uneti password:");
+        String passVar = sc.nextLine();
+        System.out.println("Uneti url:");
+        String urlVar = sc.nextLine();
 
         config = new Config(nameVar, passVar, urlVar);
 //serialize our Java object to the XML file
         try {
             XmlMapper xmlMapper = new XmlMapper();
-            config.password=encodeInBase64(config.password);
+            config.password = encodeInBase64(config.password);
             xmlMapper.writeValue(FILE_CONFIG, config);
         } catch (IOException ex) {
             Logger.getLogger(Config.class.getName()).log(Level.SEVERE, null, ex);
