@@ -21,7 +21,7 @@ public class Controller {
     private static final String X_AUTH_TOKEN = "8F090804908A729F429FA648DD8B19BE5AEBF605B1727768843961D83C38E8FF";
 
     public static void startApp() {
-//load configuration or set a new one
+        //load configuration or set a new one
         Config.loadConfigurations();
 
 //getting of csrf code

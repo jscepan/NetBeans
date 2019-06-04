@@ -1,4 +1,4 @@
-package com.mycompany.zadatak2.assignmentModel.csrf;
+package com.mycompany.zadatakgetpostxmlfinal.model.csrf;
 public class Csrf {
 
     private String id;
