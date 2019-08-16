@@ -6,11 +6,14 @@ import com.mycompany.checkurlstatus.model.WebSite;
 import java.util.List;
 
 public class Controller {
-    
+
     public static void startApp() {
-        CatalogEmail ce = new CatalogEmail(FileManipulate.readEmailFromCsv("Email.csv"));
-        System.out.println(ce.getListOfEmail());
-        List<WebSite> listOfWebSite = ce.getWebStatusFromEmails();
-        System.out.println(listOfWebSite);
+
+        String inputFile = FileManipulate.chooseFile();
+        if (inputFile != null) {
+            CatalogEmail ce = new CatalogEmail(FileManipulate.readEmailFromCsvFile(inputFile));
+            List<WebSite> listOfWebSite = ce.getWebStatusFromEmails();
+            FileManipulate.saveFile(listOfWebSite);
+        }
     }
 }
